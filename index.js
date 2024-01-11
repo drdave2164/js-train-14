@@ -544,17 +544,19 @@ function getDaysDifference(startDate, endDate) {
   ) {
     return "Помилка: вхідне значення має бути об'єктом Date";
   }
+
   const res =
     (endDate.getTime() - startDate.getTime()) /
     (1000 * 60 * 60 * 24);
 
-  //   const diff = endDate.getTime() - startDate.getTime();
-  //   const days = diff / (1000 * 60 * 60 * 24);
+  const diff = endDate.getTime() - startDate.getTime();
+  const days = diff / (1000 * 60 * 60 * 24);
+
   return {
     startDate: startDate.toISOString(),
     endDate: endDate.toISOString(),
     daysDifference: res,
-    //daysDifference: days,
+    daysDifference1: days,
   };
 }
 console.log('Завдання: 13 ==============================');
